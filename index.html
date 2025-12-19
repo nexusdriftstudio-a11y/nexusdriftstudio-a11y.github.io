@@ -34,7 +34,13 @@
     <!-- Google Fonts: Plus Jakarta Sans for a modern tech feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Preload Hero Image for LCP -->
+    <link rel="preload" as="image" href="https://play-lh.googleusercontent.com/RqEWUU3Pwc0nJ6JFYltgPBOsxCtMrhD7epum4DFA2X6zE9_RzJgIASwk-fnxX0IKPB0wsJymd0GBpaB_7r18=w480-h960-rw" fetchpriority="high">
 
     <!-- Schema.org Structured Data (Rich Snippets) -->
     <script type="application/ld+json">
@@ -74,8 +80,8 @@
             --accent: #06B6D4;        /* Cyan 500 */
             
             --bg-dark: #0f172a;
-            --text-main: #1e293b;
-            --text-light: #64748b;
+            --text-main: #0f172a;     /* Darker for better contrast */
+            --text-light: #475569;    /* Darker Slate 600 for Accessibility (Contrast) */
             
             --glass-bg: rgba(255, 255, 255, 0.65);
             --glass-border: rgba(255, 255, 255, 0.8);
@@ -98,13 +104,14 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            min-height: 100vh;
             /* Modern Mesh Gradient Background (Lighter & Cleaner) */
             background-image:
                 radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
                 radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
                 radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.15) 0px, transparent 50%);
             background-size: 100% 100%;
-            background-attachment: fixed;
+            background-attachment: scroll; /* Changed from fixed for better mobile performance */
         }
 
         /* --- UTILITIES --- */
@@ -184,10 +191,10 @@
             display: inline-block;
             padding: 6px 16px;
             background: rgba(79, 70, 229, 0.1);
-            color: var(--primary);
+            color: #3730a3; /* Indigo 800 for AAA Contrast compliance */
             border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 24px;
             border: 1px solid rgba(79, 70, 229, 0.2);
         }
@@ -267,6 +274,7 @@
         .hero-icon {
             width: 280px; /* Even bigger icon */
             height: 280px; /* Even bigger icon */
+            object-fit: contain; /* Prevents distortion */
             filter: drop-shadow(0 25px 30px rgba(0,0,0,0.15));
         }
 
@@ -412,6 +420,7 @@
         </div>
     </header>
 
+    <main>
     <!-- Hero Section -->
     <section class="container hero">
         <div class="hero-content">
@@ -425,8 +434,8 @@
                 Track expenses, plan budgets, and save money — all 100% offline and secure.
             </p>
             
-            <a href="https://play.google.com/store/apps/details?id=com.nexusdrift.smartbudgetai" target="_blank" class="btn-google-play">
-                <svg class="gp-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.84L14.5,12.81L16.81,15.12M20.3,12.5L18.3,13.65L15.14,12.09L18.3,10.38L20.3,11.5C20.89,11.84 20.89,12.16 20.3,12.5M16.81,8.88L14.5,11.19L6.05,2.16L16.81,8.88Z" /></svg>
+            <a href="https://play.google.com/store/apps/details?id=com.nexusdrift.smartbudgetai" target="_blank" rel="noopener noreferrer" class="btn-google-play" aria-label="Download SmartBudgetPro on Google Play">
+                <svg class="gp-icon" viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.84L14.5,12.81L16.81,15.12M20.3,12.5L18.3,13.65L15.14,12.09L18.3,10.38L20.3,11.5C20.89,11.84 20.89,12.16 20.3,12.5M16.81,8.88L14.5,11.19L6.05,2.16L16.81,8.88Z" /></svg>
                 <div class="gp-text">
                     <span>GET IT ON</span>
                     <span>Google Play</span>
@@ -451,7 +460,7 @@
 
         <div class="phone-wrapper">
             <div class="glass-icon-card">
-                <img src="https://play-lh.googleusercontent.com/RqEWUU3Pwc0nJ6JFYltgPBOsxCtMrhD7epum4DFA2X6zE9_RzJgIASwk-fnxX0IKPB0wsJymd0GBpaB_7r18=w480-h960-rw" alt="SmartBudgetPro App Icon" class="hero-icon">
+                <img src="https://play-lh.googleusercontent.com/RqEWUU3Pwc0nJ6JFYltgPBOsxCtMrhD7epum4DFA2X6zE9_RzJgIASwk-fnxX0IKPB0wsJymd0GBpaB_7r18=w480-h960-rw" alt="SmartBudgetPro App Interface" class="hero-icon" width="280" height="280" fetchpriority="high">
             </div>
         </div>
     </section>
@@ -514,7 +523,7 @@
             <i class="lock-icon">🔒</i>
             <h2>Offline First & 100% Private</h2>
             <p>Your financial data is yours alone. SmartBudgetPro works entirely offline, keeping your information securely on your device. No servers, no clouds, no worries.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.nexusdrift.smartbudgetai" class="btn" style="background: white; color: #0f172a; padding: 15px 30px;">Download Now</a>
+            <a href="https://play.google.com/store/apps/details?id=com.nexusdrift.smartbudgetai" class="btn" style="background: white; color: #0f172a; padding: 15px 30px;" aria-label="Download SmartBudgetPro Now">Download Now</a>
         </div>
     </section>
 
@@ -556,6 +565,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -564,12 +574,12 @@
             <p style="color: var(--text-light);">Stop wondering and start controlling. Build healthy financial habits today! 🚀</p>
             
             <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
-                <a href="mailto:nexusdriftstudio@gmail.com">Contact Support</a>
+                <a href="privacy.html" aria-label="Privacy Policy">Privacy Policy</a>
+                <a href="terms.html" aria-label="Terms of Use">Terms of Use</a>
+                <a href="mailto:nexusdriftstudio@gmail.com" aria-label="Contact Support">Contact Support</a>
             </div>
             
-            <div style="color: #cbd5e1; font-size: 0.85rem;">
+            <div style="color: var(--text-light); font-size: 0.85rem; opacity: 0.9;">
                 &copy; 2025 NexusDrift Studio. All rights reserved.
             </div>
         </div>

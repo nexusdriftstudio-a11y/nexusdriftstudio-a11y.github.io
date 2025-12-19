@@ -13,7 +13,7 @@
     <meta name="description" content="Struggling to manage your money? SmartBudgetPro is the ultimate offline expense tracker and budget planner. Control spending, save money, and track finances securely. Download now!">
     <meta name="keywords" content="Money manager, expense tracker, budget planner, personal finance, spending tracker, track expenses, save money, financial planner, money tracker, budget app, income tracker, finance app, Smart Budget, offline finance">
     <meta name="author" content="NexusDrift Studio">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="theme-color" content="#4F46E5">
     <link rel="canonical" href="https://nexusdriftstudio-a11y.github.io/" /> <!-- Замініть на ваш реальний домен -->
 
@@ -80,8 +80,8 @@
             --accent: #06B6D4;        /* Cyan 500 */
             
             --bg-dark: #0f172a;
-            --text-main: #0f172a;     /* Darker for better contrast */
-            --text-light: #475569;    /* Darker Slate 600 for Accessibility (Contrast) */
+            --text-main: #0f172a;     /* Slate 900 */
+            --text-light: #334155;    /* Slate 700 for AAA Contrast */
             
             --glass-bg: rgba(255, 255, 255, 0.65);
             --glass-border: rgba(255, 255, 255, 0.8);
@@ -166,6 +166,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none;
+            padding: 4px 0; /* Increase touch target slightly */
         }
         .logo-icon {
             width: 32px; height: 32px;
@@ -267,6 +268,7 @@
             justify-content: center;
             animation: float 6s ease-in-out infinite;
             transition: transform 0.4s ease;
+            will-change: transform; /* Optimize animation performance */
         }
         .glass-icon-card:hover {
              transform: translateY(-15px) scale(1.05);
@@ -385,10 +387,18 @@
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 15px; /* Reduced gap to accommodate padding */
             margin: 30px 0;
+            flex-wrap: wrap;
         }
-        .footer-links a { color: var(--text-light); font-weight: 500; transition: 0.2s; text-decoration: none; }
+        .footer-links a {
+            color: var(--text-light);
+            font-weight: 500;
+            transition: 0.2s;
+            text-decoration: none;
+            padding: 12px 16px; /* Larger touch targets */
+            display: inline-block;
+        }
         .footer-links a:hover { color: var(--primary); }
 
         /* --- ANIMATIONS --- */
@@ -412,11 +422,11 @@
     <!-- Header / Nav -->
     <header>
         <div class="nav-glass">
-            <a href="#" class="logo">
+            <a href="#" class="logo" aria-label="SmartBudgetPro Home">
                 <div class="logo-icon">S</div>
                 SmartBudgetPro
             </a>
-            <a href="mailto:nexusdriftstudio@gmail.com" style="color: var(--text-main); font-weight: 600; font-size: 0.95rem; text-decoration: none;">Support</a>
+            <a href="mailto:nexusdriftstudio@gmail.com" style="color: var(--text-main); font-weight: 600; font-size: 0.95rem; text-decoration: none; padding: 12px; display: inline-block;">Support</a>
         </div>
     </header>
 
@@ -460,7 +470,7 @@
 
         <div class="phone-wrapper">
             <div class="glass-icon-card">
-                <img src="https://play-lh.googleusercontent.com/RqEWUU3Pwc0nJ6JFYltgPBOsxCtMrhD7epum4DFA2X6zE9_RzJgIASwk-fnxX0IKPB0wsJymd0GBpaB_7r18=w480-h960-rw" alt="SmartBudgetPro App Interface" class="hero-icon" width="280" height="280" fetchpriority="high">
+                <img src="https://play-lh.googleusercontent.com/RqEWUU3Pwc0nJ6JFYltgPBOsxCtMrhD7epum4DFA2X6zE9_RzJgIASwk-fnxX0IKPB0wsJymd0GBpaB_7r18=w480-h960-rw" alt="SmartBudgetPro App Interface" class="hero-icon" width="280" height="280" fetchpriority="high" loading="eager">
             </div>
         </div>
     </section>
@@ -579,7 +589,7 @@
                 <a href="mailto:nexusdriftstudio@gmail.com" aria-label="Contact Support">Contact Support</a>
             </div>
             
-            <div style="color: var(--text-light); font-size: 0.85rem; opacity: 0.9;">
+            <div style="color: var(--text-light); font-size: 0.85rem;">
                 &copy; 2025 NexusDrift Studio. All rights reserved.
             </div>
         </div>

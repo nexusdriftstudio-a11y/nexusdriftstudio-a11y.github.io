@@ -71,39 +71,51 @@
 
 <div class="container">
     <h1>Privacy Policy for StepLock Pro</h1>
-    <p class="date">Last Updated: April 08, 2026</p>
+    <p class="date">Last Updated: April 14, 2026</p>
 
     <p>This Privacy Policy describes how StepLock Pro ("we," "our," or "the App") collects, uses, and protects your information. We respect your privacy and are committed to protecting it. <strong>StepLock Pro operates primarily offline and does not require you to create an account.</strong></p>
 
-    <h2>1. Data We Access and How We Use It</h2>
+    <h2>1. Permissions and Data We Access</h2>
 
-    <h3>A. Health Connect Data (Step Count & Distance)</h3>
-    <p>StepLock Pro requests access to your health data (specifically, Steps and Distance) via Google's Health Connect API.</p>
+    <h3>A. AccessibilityService API (App Monitoring & Blocking)</h3>
+    <p>StepLock Pro requires the use of Android's AccessibilityService API to function.</p>
     <ul>
-        <li><strong>How we use it:</strong> We read your step count solely to power the core functionality of the app—unlocking your restricted apps once you reach your daily walking goals.</li>
-        <li><strong>Storage & Protection:</strong> The Health Connect data we access is stored <strong>locally on your device</strong>. We do not transmit your health data to our servers, nor do we store it in any cloud database.</li>
-        <li><strong>No Third-Party Sharing:</strong> We <strong>do not</strong> sell, trade, or transfer your Health Connect data to data brokers, advertising networks, or any other third parties. The data is strictly used on your device to calculate your progress.</li>
+        <li><strong>How we use it:</strong> We use this service strictly to detect when a protected application or system setting (like Android Settings) is brought to the foreground. This allows us to display our security overlay (PIN/Step challenge) to prevent unauthorized access or circumvention of your goals.</li>
+        <li><strong>Privacy Guarantee:</strong> We <strong>do not</strong> monitor your interactions within other apps, do not record your screen, do not log keystrokes, and do not collect any personal content. The data is processed <strong>locally in real-time</strong> and is never stored or transmitted.</li>
     </ul>
 
-    <h3>B. AccessibilityService API (App Locking Functionality)</h3>
-    <p>StepLock Pro requires the use of Android's AccessibilityService API.</p>
+    <h3>B. Device Administrator API (Uninstall Protection)</h3>
+    <p>The App uses the Device Administrator permission for its "Prevent Uninstall" security feature.</p>
     <ul>
-        <li><strong>How we use it:</strong> We use this service strictly to detect which app is currently in the foreground on your device. This allows us to enforce the "App Lock" feature by displaying a blocker screen if you try to open an app you restricted before reaching your step goal.</li>
-        <li><strong>Storage & Protection:</strong> We do not record your screen, do not log your keystrokes, and do not collect the content of the apps you use. The foreground app detection happens <strong>entirely locally in real-time</strong> and the data is immediately discarded.</li>
+        <li><strong>How we use it:</strong> This permission is used solely to prevent the App from being uninstalled or stop the protection service without first passing a security challenge. </li>
+        <li><strong>Control:</strong> You can enable or disable this feature at any time within the App's settings. Enabling this requires explicit user consent through the system's security prompts.</li>
+    </ul>
+
+    <h3>C. Health, Movement & Sensor Data</h3>
+    <p>We access your step count and physical activity data via the Health Connect API and device motion sensors.</p>
+    <ul>
+        <li><strong>How we use it:</strong> To calculate your progress toward physical goals required to unlock restricted apps.</li>
+        <li><strong>Storage:</strong> All step records and movement history are stored <strong>locally on your device</strong>.</li>
+    </ul>
+
+    <h3>D. Mental & Time-Based Challenges</h3>
+    <p>StepLock Pro provides various methods to control screen time, including quizzes, cooldown timers, and usage limits.</p>
+    <ul>
+        <li><strong>Quizzes:</strong> We process your answers to educational or mental challenges locally to verify challenge completion.</li>
+        <li><strong>Usage Monitoring:</strong> We track the duration of use for shielded apps to enforce daily time limits (budgets) and cooldown periods. All usage statistics stay strictly on your device.</li>
+    </ul>
+
+    <h3>E. Biometrics & Local Authentication</h3>
+    <p>When you set a PIN, pattern, or enable biometric unlock (Fingerprint/Face), this data is handled with extreme care.</p>
+    <ul>
+        <li>We store only encrypted hashes of your security credentials in the device's <strong>Protected Secure Storage</strong>. We never have access to your actual biometrics or raw PIN codes.</li>
     </ul>
 
     <h2>2. Third-Party Services (Advertising)</h2>
-    <p>While we do not collect personal data on our servers, StepLock Pro uses <strong>Google AdMob</strong> to display advertisements.</p>
-    <ul>
-        <li>AdMob may automatically collect certain device information, such as your IP address, device type, network information, and your Android Advertising ID, to serve relevant ads.</li>
-        <li>AdMob operates according to its own privacy policy. You can learn more about how Google handles data in its advertising products here: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
-    </ul>
+    <p>StepLock Pro uses <strong>Google AdMob</strong> to display advertisements. AdMob may collect certain device information (IP address, Advertising ID) to serve relevant ads according to its own policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
 
     <h2>3. Data Retention and Deletion</h2>
-    <p>Because you do not create an account and all your personal and health data (steps, restricted apps list) is stored locally on your device, you have complete control over your data.</p>
-    <ul>
-        <li><strong>To delete your data:</strong> Simply clear the app's cache/data in your Android settings, or uninstall StepLock Pro from your device. This will permanently delete all your app-related data.</li>
-    </ul>
+    <p>All your settings, step counts, and blocked app lists are stored <strong>locally</strong>. To delete all data, you can clear the App's data or uninstall the App (after disabling Uninstall Protection if active).</p>
 
     <h2>4. Children's Privacy</h2>
     <p>StepLock Pro is intended for general audiences and is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>

@@ -1,0 +1,41 @@
+# StepShield Pro
+
+> StepShield Pro is a privacy-first Android app blocker with a built-in pedometer. It blocks distracting apps (Instagram, YouTube, TikTok, games, browsers) and unlocks them only after the user reaches a self-set daily step goal — a pattern we call "Walk to Unlock" and the broader "anti-workaround" design.
+
+StepShield Pro is made by NexusDrift Studio. The product is 100% free forever, **contains ads**, and has no paid tier. It performs zero analytics, uses no Firebase, and syncs nothing to the cloud — all step counting and app blocking happen locally on the device. It works fully offline.
+
+This `llms.txt` describes the StepShield Pro section of nexusdriftstudio-a11y.github.io (deployed at `/stepshield/`). The same site also hosts the SmartBudgetPro root section; this file covers only the StepShield / digital-wellbeing content.
+
+## Category
+- Digital wellbeing
+- Screen-time control / attention management
+- Android app blocker + pedometer (Walk to Unlock)
+- Self-discipline tool (not parental control)
+
+## Use cases
+- Block time-sink apps (YouTube, Instagram, TikTok, games) behind a walking goal so screen time becomes something earned, not defaulted into.
+- Replace willpower-based blockers ("ignore for 24h") with a real-world precondition that can't be tapped away.
+- Build a daily movement habit by attaching it to a high-frequency trigger (unlocking phone entertainment).
+- Use offline, in airplane mode, or with no network — blocking and step counting never depend on a server.
+- Keep all habit and step data on-device for users who refuse cloud-synced wellbeing apps.
+
+## Differentiators
+- **Movement as reward, not punishment.** Other blockers say "no" and ship an override button. StepShield makes screen time a reward earned by walking — there is no self-override to tap.
+- **Truly private.** No account, no login, no telemetry, no Firebase, no cloud sync. Steps and PINs stay local.
+- **Offline-first.** On-device pedometer + on-device blocking. Works with no internet.
+- **Free forever, contains ads, no premium tier.** No upsell that could silently disable a block list.
+- **Anti-workaround pattern.** Removing the override (rather than hiding it) defeats the self-override that defeats every timer-based blocker.
+- **Honest about limits.** AccessibilityService-based blocking on stock (non-rooted) Android can be revoked by a determined user; uninstall protection via device-admin raises the bar. We say so plainly rather than claiming "un-bypassable."
+
+## Also created by NexusDrift Studio on this site
+- SmartBudgetPro — 100% offline, private expense tracker (the live root at `/`). Note: SmartBudgetPro is a separate product; it is not an app blocker.
+
+## Links
+- [StepShield Pro (product page)](https://nexusdriftstudio-a11y.github.io/stepshield/)
+- [StepShield Pro blog index](https://nexusdriftstudio-a11y.github.io/stepshield/blog/)
+- [7 Best App Blockers for Android (2026)](https://nexusdriftstudio-a11y.github.io/stepshield/blog/7-best-app-blockers-android-2026.html)
+- [StepShield Pro vs Cold Turkey](https://nexusdriftstudio-a11y.github.io/stepshield/blog/stepshield-pro-vs-cold-turkey.html)
+- [How to Block YouTube Until You Walk 1,000 Steps](https://nexusdriftstudio-a11y.github.io/stepshield/blog/how-to-block-youtube-until-you-walk-1000-steps.html)
+- [Scroll Debt: the anti-workaround pattern](https://nexusdriftstudio-a11y.github.io/stepshield/blog/scroll-debt-the-anti-workaround-pattern.html)
+- [StepShield Pro on Google Play](https://play.google.com/store/apps/details?id=com.appblocker.screentime.pedometer.workout.fitness.coaching)
+- [Site sitemap](https://nexusdriftstudio-a11y.github.io/sitemap.xml)

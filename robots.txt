@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://nexusdriftstudio-a11y.github.io/sitemap.xml
 Sitemap: https://nexusdriftstudio-a11y.github.io/sitemap-gsc.xml
+Sitemap: https://nexusdriftstudio-a11y.github.io/sitemap.txt
